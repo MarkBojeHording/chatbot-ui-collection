@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .chat-message {
+    @apply max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl;
+  }
+  
+  .user-message {
+    @apply bg-primary-600 text-white rounded-2xl rounded-br-md px-4 py-2 ml-auto;
+  }
+  
+  .bot-message {
+    @apply bg-white border border-gray-200 rounded-2xl rounded-bl-md px-4 py-2 mr-auto shadow-sm;
+  }
+  
+  .confidence-badge {
+    @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .confidence-high {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .confidence-medium {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .confidence-low {
+    @apply bg-red-100 text-red-800;
+  }
+}
